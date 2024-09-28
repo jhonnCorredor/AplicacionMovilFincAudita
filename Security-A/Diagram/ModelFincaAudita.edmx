@@ -1,0 +1,1698 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Security_ServiceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AssessmentCriterias">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Rating_range" Type="int" Nullable="false" />
+          <Property Name="Type_criterian" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="State" Type="bit" Nullable="false" />
+          <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Updated_at" Type="datetime2" Precision="7" />
+          <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="Checklists">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Calification_total" Type="int" Nullable="false" />
+          <Property Name="State" Type="bit" Nullable="false" />
+          <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Updated_at" Type="datetime2" Precision="7" />
+          <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="Citys">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CountryId" Type="int" Nullable="false" />
+          <Property Name="State" Type="bit" Nullable="false" />
+          <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Updated_at" Type="datetime2" Precision="7" />
+          <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="Countrys">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ContinentId" Type="int" Nullable="false" />
+          <Property Name="State" Type="bit" Nullable="false" />
+          <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Updated_at" Type="datetime2" Precision="7" />
+          <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="Crops">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="State" Type="bit" Nullable="false" />
+          <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Updated_at" Type="datetime2" Precision="7" />
+          <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="Evidences">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Document" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="State" Type="bit" Nullable="false" />
+          <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Updated_at" Type="datetime2" Precision="7" />
+          <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="FarmCrops">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CropId" Type="int" Nullable="false" />
+          <Property Name="FarmId" Type="int" Nullable="false" />
+          <Property Name="Num_hectareas" Type="int" Nullable="false" />
+          <Property Name="State" Type="bit" Nullable="false" />
+          <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Updated_at" Type="datetime2" Precision="7" />
+          <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="Farms">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CityId" Type="int" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="State" Type="bit" Nullable="false" />
+          <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Updated_at" Type="datetime2" Precision="7" />
+          <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="Fertilizations">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateFertilization" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="TypeFertilization" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="QuantityMix" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ReviewTechnicalId" Type="int" Nullable="false" />
+          <Property Name="State" Type="bit" Nullable="false" />
+          <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Updated_at" Type="datetime2" Precision="7" />
+          <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="FertilizationSupplies">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Dose" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="SuppliesId" Type="int" Nullable="false" />
+          <Property Name="FertilizationId" Type="int" Nullable="false" />
+          <Property Name="State" Type="bit" Nullable="false" />
+          <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Updated_at" Type="datetime2" Precision="7" />
+          <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="Modulos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="State" Type="bit" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Position" Type="int" Nullable="false" />
+          <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Updated_at" Type="datetime2" Precision="7" />
+          <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="Persons">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="First_name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Last_name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Addres" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Phone" Type="int" Nullable="false" />
+          <Property Name="Type_document" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Document" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CityId" Type="int" Nullable="false" />
+          <Property Name="State" Type="bit" Nullable="false" />
+          <Property Name="Birth_of_date" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Updated_at" Type="datetime2" Precision="7" />
+          <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="Qualifications">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Observation" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Qualification_criteria" Type="int" Nullable="false" />
+          <Property Name="AssesmentCriteriaId" Type="int" Nullable="false" />
+          <Property Name="AssessmentCriteriaId" Type="int" Nullable="false" />
+          <Property Name="ChecklistId" Type="int" Nullable="false" />
+          <Property Name="State" Type="bit" Nullable="false" />
+          <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Updated_at" Type="datetime2" Precision="7" />
+          <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="ReviewTechnicals">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date_review" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Observation" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="FarmId" Type="int" Nullable="false" />
+          <Property Name="TecnicoId" Type="int" Nullable="false" />
+          <Property Name="ChecklistId" Type="int" Nullable="false" />
+          <Property Name="State" Type="bit" Nullable="false" />
+          <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Updated_at" Type="datetime2" Precision="7" />
+          <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="State" Type="bit" Nullable="false" />
+          <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Updated_at" Type="datetime2" Precision="7" />
+          <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="RoleViews">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoleId" Type="int" Nullable="false" />
+          <Property Name="ViewId" Type="int" Nullable="false" />
+          <Property Name="State" Type="bit" Nullable="false" />
+          <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Updated_at" Type="datetime2" Precision="7" />
+          <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="Supplies">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="price" Type="float" Nullable="false" />
+          <Property Name="State" Type="bit" Nullable="false" />
+          <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Updated_at" Type="datetime2" Precision="7" />
+          <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="UserRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="RoleId" Type="int" Nullable="false" />
+          <Property Name="State" Type="bit" Nullable="false" />
+          <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Updated_at" Type="datetime2" Precision="7" />
+          <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="PersonId" Type="int" Nullable="false" />
+          <Property Name="State" Type="bit" Nullable="false" />
+          <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Updated_at" Type="datetime2" Precision="7" />
+          <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="Views">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Route" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ModuloId" Type="int" Nullable="false" />
+          <Property Name="State" Type="bit" Nullable="false" />
+          <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Updated_at" Type="datetime2" Precision="7" />
+          <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+        </EntityType>
+        <Association Name="FK_Citys_Countrys_CountryId">
+          <End Role="Countrys" Type="Self.Countrys" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Citys" Type="Self.Citys" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Countrys">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Citys">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FarmCrops_Crops_CropId">
+          <End Role="Crops" Type="Self.Crops" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="FarmCrops" Type="Self.FarmCrops" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Crops">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FarmCrops">
+              <PropertyRef Name="CropId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FarmCrops_Farms_FarmId">
+          <End Role="Farms" Type="Self.Farms" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="FarmCrops" Type="Self.FarmCrops" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Farms">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FarmCrops">
+              <PropertyRef Name="FarmId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Farms_Citys_CityId">
+          <End Role="Citys" Type="Self.Citys" Multiplicity="0..1" />
+          <End Role="Farms" Type="Self.Farms" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Citys">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Farms">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Farms_Users_UserId">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Farms" Type="Self.Farms" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Farms">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Fertilizations_ReviewTechnicals_ReviewTechnicalId">
+          <End Role="ReviewTechnicals" Type="Self.ReviewTechnicals" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Fertilizations" Type="Self.Fertilizations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ReviewTechnicals">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Fertilizations">
+              <PropertyRef Name="ReviewTechnicalId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FertilizationSupplies_Fertilizations_FertilizationId">
+          <End Role="Fertilizations" Type="Self.Fertilizations" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="FertilizationSupplies" Type="Self.FertilizationSupplies" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fertilizations">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FertilizationSupplies">
+              <PropertyRef Name="FertilizationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FertilizationSupplies_Supplies_SuppliesId">
+          <End Role="Supplies" Type="Self.Supplies" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="FertilizationSupplies" Type="Self.FertilizationSupplies" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Supplies">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FertilizationSupplies">
+              <PropertyRef Name="SuppliesId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Persons_Citys_CityId">
+          <End Role="Citys" Type="Self.Citys" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Persons" Type="Self.Persons" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Citys">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Persons">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Qualifications_AssessmentCriterias_AssessmentCriteriaId">
+          <End Role="AssessmentCriterias" Type="Self.AssessmentCriterias" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Qualifications" Type="Self.Qualifications" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AssessmentCriterias">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Qualifications">
+              <PropertyRef Name="AssessmentCriteriaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Qualifications_Checklists_ChecklistId">
+          <End Role="Checklists" Type="Self.Checklists" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Qualifications" Type="Self.Qualifications" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Checklists">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Qualifications">
+              <PropertyRef Name="ChecklistId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReviewTechnicals_Checklists_ChecklistId">
+          <End Role="Checklists" Type="Self.Checklists" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ReviewTechnicals" Type="Self.ReviewTechnicals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Checklists">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ReviewTechnicals">
+              <PropertyRef Name="ChecklistId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReviewTechnicals_Farms_FarmId">
+          <End Role="Farms" Type="Self.Farms" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ReviewTechnicals" Type="Self.ReviewTechnicals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Farms">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ReviewTechnicals">
+              <PropertyRef Name="FarmId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReviewTechnicals_Users_TecnicoId">
+          <End Role="Users" Type="Self.Users" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ReviewTechnicals" Type="Self.ReviewTechnicals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ReviewTechnicals">
+              <PropertyRef Name="TecnicoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RoleViews_Roles_RoleId">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="RoleViews" Type="Self.RoleViews" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RoleViews">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RoleViews_Views_ViewId">
+          <End Role="Views" Type="Self.Views" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="RoleViews" Type="Self.RoleViews" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Views">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RoleViews">
+              <PropertyRef Name="ViewId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserRoles_Roles_RoleId">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="UserRoles" Type="Self.UserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserRoles">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserRoles_Users_UserId">
+          <End Role="Users" Type="Self.Users" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="UserRoles" Type="Self.UserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserRoles">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_Persons_PersonId">
+          <End Role="Persons" Type="Self.Persons" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Users" Type="Self.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Persons">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="PersonId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Views_Modulos_ModuloId">
+          <End Role="Modulos" Type="Self.Modulos" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Views" Type="Self.Views" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Modulos">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Views">
+              <PropertyRef Name="ModuloId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Security_ServiceModelStoreContainer">
+          <EntitySet Name="AssessmentCriterias" EntityType="Self.AssessmentCriterias" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Checklists" EntityType="Self.Checklists" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Citys" EntityType="Self.Citys" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Countrys" EntityType="Self.Countrys" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Crops" EntityType="Self.Crops" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Evidences" EntityType="Self.Evidences" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FarmCrops" EntityType="Self.FarmCrops" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Farms" EntityType="Self.Farms" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Fertilizations" EntityType="Self.Fertilizations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FertilizationSupplies" EntityType="Self.FertilizationSupplies" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Modulos" EntityType="Self.Modulos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Persons" EntityType="Self.Persons" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Qualifications" EntityType="Self.Qualifications" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReviewTechnicals" EntityType="Self.ReviewTechnicals" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RoleViews" EntityType="Self.RoleViews" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Supplies" EntityType="Self.Supplies" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserRoles" EntityType="Self.UserRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Views" EntityType="Self.Views" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Citys_Countrys_CountryId" Association="Self.FK_Citys_Countrys_CountryId">
+            <End Role="Countrys" EntitySet="Countrys" />
+            <End Role="Citys" EntitySet="Citys" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FarmCrops_Crops_CropId" Association="Self.FK_FarmCrops_Crops_CropId">
+            <End Role="Crops" EntitySet="Crops" />
+            <End Role="FarmCrops" EntitySet="FarmCrops" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FarmCrops_Farms_FarmId" Association="Self.FK_FarmCrops_Farms_FarmId">
+            <End Role="Farms" EntitySet="Farms" />
+            <End Role="FarmCrops" EntitySet="FarmCrops" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Farms_Citys_CityId" Association="Self.FK_Farms_Citys_CityId">
+            <End Role="Citys" EntitySet="Citys" />
+            <End Role="Farms" EntitySet="Farms" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Farms_Users_UserId" Association="Self.FK_Farms_Users_UserId">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Farms" EntitySet="Farms" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Fertilizations_ReviewTechnicals_ReviewTechnicalId" Association="Self.FK_Fertilizations_ReviewTechnicals_ReviewTechnicalId">
+            <End Role="ReviewTechnicals" EntitySet="ReviewTechnicals" />
+            <End Role="Fertilizations" EntitySet="Fertilizations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FertilizationSupplies_Fertilizations_FertilizationId" Association="Self.FK_FertilizationSupplies_Fertilizations_FertilizationId">
+            <End Role="Fertilizations" EntitySet="Fertilizations" />
+            <End Role="FertilizationSupplies" EntitySet="FertilizationSupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FertilizationSupplies_Supplies_SuppliesId" Association="Self.FK_FertilizationSupplies_Supplies_SuppliesId">
+            <End Role="Supplies" EntitySet="Supplies" />
+            <End Role="FertilizationSupplies" EntitySet="FertilizationSupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Persons_Citys_CityId" Association="Self.FK_Persons_Citys_CityId">
+            <End Role="Citys" EntitySet="Citys" />
+            <End Role="Persons" EntitySet="Persons" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Qualifications_AssessmentCriterias_AssessmentCriteriaId" Association="Self.FK_Qualifications_AssessmentCriterias_AssessmentCriteriaId">
+            <End Role="AssessmentCriterias" EntitySet="AssessmentCriterias" />
+            <End Role="Qualifications" EntitySet="Qualifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Qualifications_Checklists_ChecklistId" Association="Self.FK_Qualifications_Checklists_ChecklistId">
+            <End Role="Checklists" EntitySet="Checklists" />
+            <End Role="Qualifications" EntitySet="Qualifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReviewTechnicals_Checklists_ChecklistId" Association="Self.FK_ReviewTechnicals_Checklists_ChecklistId">
+            <End Role="Checklists" EntitySet="Checklists" />
+            <End Role="ReviewTechnicals" EntitySet="ReviewTechnicals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReviewTechnicals_Farms_FarmId" Association="Self.FK_ReviewTechnicals_Farms_FarmId">
+            <End Role="Farms" EntitySet="Farms" />
+            <End Role="ReviewTechnicals" EntitySet="ReviewTechnicals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReviewTechnicals_Users_TecnicoId" Association="Self.FK_ReviewTechnicals_Users_TecnicoId">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="ReviewTechnicals" EntitySet="ReviewTechnicals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RoleViews_Roles_RoleId" Association="Self.FK_RoleViews_Roles_RoleId">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="RoleViews" EntitySet="RoleViews" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RoleViews_Views_ViewId" Association="Self.FK_RoleViews_Views_ViewId">
+            <End Role="Views" EntitySet="Views" />
+            <End Role="RoleViews" EntitySet="RoleViews" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserRoles_Roles_RoleId" Association="Self.FK_UserRoles_Roles_RoleId">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="UserRoles" EntitySet="UserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserRoles_Users_UserId" Association="Self.FK_UserRoles_Users_UserId">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="UserRoles" EntitySet="UserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_Persons_PersonId" Association="Self.FK_Users_Persons_PersonId">
+            <End Role="Persons" EntitySet="Persons" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Views_Modulos_ModuloId" Association="Self.FK_Views_Modulos_ModuloId">
+            <End Role="Modulos" EntitySet="Modulos" />
+            <End Role="Views" EntitySet="Views" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Security_ServiceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AssessmentCriterias">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Rating_range" Type="Int32" Nullable="false" />
+          <Property Name="Type_criterian" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="State" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="7" />
+          <Property Name="DeletedAt" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="Qualifications" Relationship="Self.FK_Qualifications_AssessmentCriterias_AssessmentCriteriaId" FromRole="AssessmentCriterias" ToRole="Qualifications" />
+        </EntityType>
+        <EntityType Name="Checklists">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Calification_total" Type="Int32" Nullable="false" />
+          <Property Name="State" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="7" />
+          <Property Name="DeletedAt" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="Qualifications" Relationship="Self.FK_Qualifications_Checklists_ChecklistId" FromRole="Checklists" ToRole="Qualifications" />
+          <NavigationProperty Name="ReviewTechnicals" Relationship="Self.FK_ReviewTechnicals_Checklists_ChecklistId" FromRole="Checklists" ToRole="ReviewTechnicals" />
+        </EntityType>
+        <EntityType Name="Citys">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DepartamentId" Type="Int32" Nullable="false" />
+          <Property Name="State" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="7" />
+          <Property Name="DeletedAt" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="Departament" Relationship="Security_ServiceModel.CitysDepartament" FromRole="Citys" ToRole="Departament" />
+          <NavigationProperty Name="Persons" Relationship="Security_ServiceModel.PersonsCitys" FromRole="Citys" ToRole="Persons" />
+          <NavigationProperty Name="Farms" Relationship="Security_ServiceModel.FarmsCitys" FromRole="Citys" ToRole="Farms" />
+        </EntityType>
+        <EntityType Name="Countrys">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="State" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="7" />
+          <Property Name="DeletedAt" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="Departament" Relationship="Security_ServiceModel.DepartamentCountrys" FromRole="Countrys" ToRole="Departament" />
+        </EntityType>
+        <EntityType Name="Crops">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="State" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="7" />
+          <Property Name="DeletedAt" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="FarmCrops" Relationship="Self.FK_FarmCrops_Crops_CropId" FromRole="Crops" ToRole="FarmCrops" />
+        </EntityType>
+        <EntityType Name="Evidences">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Document" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="State" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="7" />
+          <Property Name="DeletedAt" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="ReviewTechnicals" Relationship="Security_ServiceModel.EvidencesReviewTechnicals" FromRole="Evidences" ToRole="ReviewTechnicals" />
+          <Property Name="ReviewId" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Lots">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CropId" Type="Int32" Nullable="false" />
+          <Property Name="FarmId" Type="Int32" Nullable="false" />
+          <Property Name="Hectare" Type="Int32" Nullable="false" />
+          <Property Name="State" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="7" />
+          <Property Name="DeletedAt" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="Crops" Relationship="Self.FK_FarmCrops_Crops_CropId" FromRole="FarmCrops" ToRole="Crops" />
+          <NavigationProperty Name="Farms" Relationship="Self.FK_FarmCrops_Farms_FarmId" FromRole="FarmCrops" ToRole="Farms" />
+        </EntityType>
+        <EntityType Name="Farms">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserId" Type="Int32" />
+          <Property Name="State" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="7" />
+          <Property Name="DeletedAt" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="FarmCrops" Relationship="Self.FK_FarmCrops_Farms_FarmId" FromRole="Farms" ToRole="FarmCrops" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_Farms_Users_UserId" FromRole="Farms" ToRole="Users" />
+          <Property Name="CityId" Type="String" Nullable="false" />
+          <NavigationProperty Name="Citys" Relationship="Security_ServiceModel.FarmsCitys" FromRole="Farms" ToRole="Citys" />
+          <Property Name="Addres" Type="String" Nullable="false" />
+          <Property Name="Dimension" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Treatments">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateTreatment" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="TypeTreatment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="QuantityMix" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="State" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="7" />
+          <Property Name="DeletedAt" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="TreatmentSupplies" Relationship="Security_ServiceModel.TreatmentTreatmentSupplies" FromRole="Treatment" ToRole="TreatmentSupplies" />
+          <NavigationProperty Name="LotTreatment" Relationship="Security_ServiceModel.TreatmentLotTreatment" FromRole="Treatment" ToRole="LotTreatment" />
+        </EntityType>
+        <EntityType Name="TreatmentSupplies">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Dose" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SuppliesId" Type="Int32" Nullable="false" />
+          <Property Name="TreatmentId" Type="Int32" Nullable="false" />
+          <Property Name="State" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="7" />
+          <Property Name="DeletedAt" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="Supplies" Relationship="Self.FK_FertilizationSupplies_Supplies_SuppliesId" FromRole="FertilizationSupplies" ToRole="Supplies" />
+          <NavigationProperty Name="Treatment" Relationship="Security_ServiceModel.TreatmentTreatmentSupplies" FromRole="TreatmentSupplies" ToRole="Treatment" />
+        </EntityType>
+        <EntityType Name="Modulos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="State" Type="Boolean" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Position" Type="Int32" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="7" />
+          <Property Name="DeletedAt" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="Views" Relationship="Self.FK_Views_Modulos_ModuloId" FromRole="Modulos" ToRole="Views" />
+        </EntityType>
+        <EntityType Name="Persons">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="First_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Last_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Addres" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Phone" Type="Int32" Nullable="false" />
+          <Property Name="Type_document" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Document" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="State" Type="Boolean" Nullable="false" />
+          <Property Name="Birth_of_date" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="7" />
+          <Property Name="DeletedAt" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_Users_Persons_PersonId" FromRole="Persons" ToRole="Users" />
+          <Property Name="CityId" Type="String" Nullable="false" />
+          <NavigationProperty Name="Citys" Relationship="Security_ServiceModel.PersonsCitys" FromRole="Persons" ToRole="Citys" />
+        </EntityType>
+        <EntityType Name="Qualifications">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Observation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Qualification_criteria" Type="Int32" Nullable="false" />
+          <Property Name="AssessmentCriteriaId" Type="Int32" Nullable="false" />
+          <Property Name="ChecklistId" Type="Int32" Nullable="false" />
+          <Property Name="State" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="7" />
+          <Property Name="DeletedAt" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="AssessmentCriterias" Relationship="Self.FK_Qualifications_AssessmentCriterias_AssessmentCriteriaId" FromRole="Qualifications" ToRole="AssessmentCriterias" />
+          <NavigationProperty Name="Checklists" Relationship="Self.FK_Qualifications_Checklists_ChecklistId" FromRole="Qualifications" ToRole="Checklists" />
+        </EntityType>
+        <EntityType Name="ReviewTechnicals">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date_review" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Observation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LotId" Type="Int32" Nullable="false" />
+          <Property Name="TecnicoId" Type="Int32" Nullable="false" />
+          <Property Name="ChecklistId" Type="Int32" Nullable="false" />
+          <Property Name="State" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="7" />
+          <Property Name="DeletedAt" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="Checklists" Relationship="Self.FK_ReviewTechnicals_Checklists_ChecklistId" FromRole="ReviewTechnicals" ToRole="Checklists" />
+          <NavigationProperty Name="Lots" Relationship="Security_ServiceModel.ReviewTechnicalsLots" FromRole="ReviewTechnicals" ToRole="Lots" />
+          <NavigationProperty Name="Users" Relationship="Security_ServiceModel.ReviewTechnicalsUsers" FromRole="ReviewTechnicals" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="State" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="7" />
+          <Property Name="DeletedAt" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="RoleViews" Relationship="Self.FK_RoleViews_Roles_RoleId" FromRole="Roles" ToRole="RoleViews" />
+          <NavigationProperty Name="UserRoles" Relationship="Self.FK_UserRoles_Roles_RoleId" FromRole="Roles" ToRole="UserRoles" />
+        </EntityType>
+        <EntityType Name="RoleViews">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleId" Type="Int32" Nullable="false" />
+          <Property Name="ViewId" Type="Int32" Nullable="false" />
+          <Property Name="State" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="7" />
+          <Property Name="DeletedAt" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="Roles" Relationship="Self.FK_RoleViews_Roles_RoleId" FromRole="RoleViews" ToRole="Roles" />
+          <NavigationProperty Name="Views" Relationship="Self.FK_RoleViews_Views_ViewId" FromRole="RoleViews" ToRole="Views" />
+        </EntityType>
+        <EntityType Name="Supplies">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="price" Type="Double" Nullable="false" />
+          <Property Name="State" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="7" />
+          <Property Name="DeletedAt" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="FertilizationSupplies" Relationship="Self.FK_FertilizationSupplies_Supplies_SuppliesId" FromRole="Supplies" ToRole="FertilizationSupplies" />
+        </EntityType>
+        <EntityType Name="UserRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="RoleId" Type="Int32" Nullable="false" />
+          <Property Name="State" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="7" />
+          <Property Name="DeletedAt" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="Roles" Relationship="Self.FK_UserRoles_Roles_RoleId" FromRole="UserRoles" ToRole="Roles" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_UserRoles_Users_UserId" FromRole="UserRoles" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PersonId" Type="Int32" Nullable="false" />
+          <Property Name="State" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="7" />
+          <Property Name="DeletedAt" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="Farms" Relationship="Self.FK_Farms_Users_UserId" FromRole="Users" ToRole="Farms" />
+          <NavigationProperty Name="Persons" Relationship="Self.FK_Users_Persons_PersonId" FromRole="Users" ToRole="Persons" />
+          <NavigationProperty Name="UserRoles" Relationship="Self.FK_UserRoles_Users_UserId" FromRole="Users" ToRole="UserRoles" />
+          <NavigationProperty Name="ReviewTechnicals" Relationship="Security_ServiceModel.ReviewTechnicalsUsers" FromRole="Users" ToRole="ReviewTechnicals" />
+          <NavigationProperty Name="Alert" Relationship="Security_ServiceModel.AlertUsers" FromRole="Users" ToRole="Alert" />
+        </EntityType>
+        <EntityType Name="Views">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Route" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ModuloId" Type="Int32" Nullable="false" />
+          <Property Name="State" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="7" />
+          <Property Name="DeletedAt" Type="DateTime" Precision="7" />
+          <NavigationProperty Name="Modulos" Relationship="Self.FK_Views_Modulos_ModuloId" FromRole="Views" ToRole="Modulos" />
+          <NavigationProperty Name="RoleViews" Relationship="Self.FK_RoleViews_Views_ViewId" FromRole="Views" ToRole="RoleViews" />
+        </EntityType>
+        <Association Name="FK_Qualifications_AssessmentCriterias_AssessmentCriteriaId">
+          <End Role="AssessmentCriterias" Type="Self.AssessmentCriterias" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Qualifications" Type="Self.Qualifications" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AssessmentCriterias">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Qualifications">
+              <PropertyRef Name="AssessmentCriteriaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Qualifications_Checklists_ChecklistId">
+          <End Role="Checklists" Type="Self.Checklists" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Qualifications" Type="Self.Qualifications" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Checklists">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Qualifications">
+              <PropertyRef Name="ChecklistId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ReviewTechnicals_Checklists_ChecklistId">
+          <End Role="Checklists" Type="Self.Checklists" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ReviewTechnicals" Type="Self.ReviewTechnicals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Checklists">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ReviewTechnicals">
+              <PropertyRef Name="ChecklistId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FarmCrops_Crops_CropId">
+          <End Role="Crops" Type="Self.Crops" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="FarmCrops" Type="Security_ServiceModel.Lots" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Crops">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FarmCrops">
+              <PropertyRef Name="CropId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FarmCrops_Farms_FarmId">
+          <End Role="Farms" Type="Self.Farms" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="FarmCrops" Type="Security_ServiceModel.Lots" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Farms">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FarmCrops">
+              <PropertyRef Name="FarmId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Farms_Users_UserId">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="Farms" Type="Self.Farms" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Farms">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FertilizationSupplies_Supplies_SuppliesId">
+          <End Role="Supplies" Type="Self.Supplies" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="FertilizationSupplies" Type="Security_ServiceModel.TreatmentSupplies" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Supplies">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FertilizationSupplies">
+              <PropertyRef Name="SuppliesId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Views_Modulos_ModuloId">
+          <End Role="Modulos" Type="Self.Modulos" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Views" Type="Self.Views" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Modulos">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Views">
+              <PropertyRef Name="ModuloId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_Persons_PersonId">
+          <End Role="Persons" Type="Self.Persons" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Users" Type="Self.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Persons">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="PersonId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RoleViews_Roles_RoleId">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="RoleViews" Type="Self.RoleViews" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RoleViews">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserRoles_Roles_RoleId">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="UserRoles" Type="Self.UserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserRoles">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RoleViews_Views_ViewId">
+          <End Role="Views" Type="Self.Views" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="RoleViews" Type="Self.RoleViews" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Views">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RoleViews">
+              <PropertyRef Name="ViewId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserRoles_Users_UserId">
+          <End Role="Users" Type="Self.Users" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="UserRoles" Type="Self.UserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserRoles">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Security_ServiceEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AssessmentCriterias" EntityType="Self.AssessmentCriterias" />
+          <EntitySet Name="Checklists" EntityType="Self.Checklists" />
+          <EntitySet Name="Citys" EntityType="Self.Citys" />
+          <EntitySet Name="Countrys" EntityType="Self.Countrys" />
+          <EntitySet Name="Crops" EntityType="Self.Crops" />
+          <EntitySet Name="Evidences" EntityType="Self.Evidences" />
+          <EntitySet Name="Lots" EntityType="Security_ServiceModel.Lots" />
+          <EntitySet Name="Farms" EntityType="Self.Farms" />
+          <EntitySet Name="Fertilizations" EntityType="Security_ServiceModel.Treatments" />
+          <EntitySet Name="FertilizationSupplies" EntityType="Security_ServiceModel.TreatmentSupplies" />
+          <EntitySet Name="Modulos" EntityType="Self.Modulos" />
+          <EntitySet Name="Persons" EntityType="Self.Persons" />
+          <EntitySet Name="Qualifications" EntityType="Self.Qualifications" />
+          <EntitySet Name="ReviewTechnicals" EntityType="Self.ReviewTechnicals" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" />
+          <EntitySet Name="RoleViews" EntityType="Self.RoleViews" />
+          <EntitySet Name="Supplies" EntityType="Self.Supplies" />
+          <EntitySet Name="UserRoles" EntityType="Self.UserRoles" />
+          <EntitySet Name="Users" EntityType="Self.Users" />
+          <EntitySet Name="Views" EntityType="Self.Views" />
+          <AssociationSet Name="FK_Qualifications_AssessmentCriterias_AssessmentCriteriaId" Association="Self.FK_Qualifications_AssessmentCriterias_AssessmentCriteriaId">
+            <End Role="AssessmentCriterias" EntitySet="AssessmentCriterias" />
+            <End Role="Qualifications" EntitySet="Qualifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Qualifications_Checklists_ChecklistId" Association="Self.FK_Qualifications_Checklists_ChecklistId">
+            <End Role="Checklists" EntitySet="Checklists" />
+            <End Role="Qualifications" EntitySet="Qualifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ReviewTechnicals_Checklists_ChecklistId" Association="Self.FK_ReviewTechnicals_Checklists_ChecklistId">
+            <End Role="Checklists" EntitySet="Checklists" />
+            <End Role="ReviewTechnicals" EntitySet="ReviewTechnicals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FarmCrops_Crops_CropId" Association="Self.FK_FarmCrops_Crops_CropId">
+            <End Role="Crops" EntitySet="Crops" />
+            <End Role="FarmCrops" EntitySet="Lots" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FarmCrops_Farms_FarmId" Association="Self.FK_FarmCrops_Farms_FarmId">
+            <End Role="Farms" EntitySet="Farms" />
+            <End Role="FarmCrops" EntitySet="Lots" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Farms_Users_UserId" Association="Self.FK_Farms_Users_UserId">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Farms" EntitySet="Farms" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FertilizationSupplies_Supplies_SuppliesId" Association="Self.FK_FertilizationSupplies_Supplies_SuppliesId">
+            <End Role="Supplies" EntitySet="Supplies" />
+            <End Role="FertilizationSupplies" EntitySet="FertilizationSupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Views_Modulos_ModuloId" Association="Self.FK_Views_Modulos_ModuloId">
+            <End Role="Modulos" EntitySet="Modulos" />
+            <End Role="Views" EntitySet="Views" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_Persons_PersonId" Association="Self.FK_Users_Persons_PersonId">
+            <End Role="Persons" EntitySet="Persons" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RoleViews_Roles_RoleId" Association="Self.FK_RoleViews_Roles_RoleId">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="RoleViews" EntitySet="RoleViews" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserRoles_Roles_RoleId" Association="Self.FK_UserRoles_Roles_RoleId">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="UserRoles" EntitySet="UserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RoleViews_Views_ViewId" Association="Self.FK_RoleViews_Views_ViewId">
+            <End Role="Views" EntitySet="Views" />
+            <End Role="RoleViews" EntitySet="RoleViews" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserRoles_Users_UserId" Association="Self.FK_UserRoles_Users_UserId">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="UserRoles" EntitySet="UserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="EvidencesReviewTechnicals" Association="Security_ServiceModel.EvidencesReviewTechnicals">
+            <End Role="Evidences" EntitySet="Evidences" />
+            <End Role="ReviewTechnicals" EntitySet="ReviewTechnicals" />
+          </AssociationSet>
+          <EntitySet Name="DepartamentsSet" EntityType="Security_ServiceModel.Departaments" />
+          <EntitySet Name="LotTreatmentsSet" EntityType="Security_ServiceModel.LotTreatments" />
+          <AssociationSet Name="LotFertilizationLots" Association="Security_ServiceModel.LotFertilizationLots">
+            <End Role="LotFertilization" EntitySet="LotTreatmentsSet" />
+            <End Role="Lots" EntitySet="Lots" />
+          </AssociationSet>
+          <AssociationSet Name="ReviewTechnicalsLots" Association="Security_ServiceModel.ReviewTechnicalsLots">
+            <End Role="ReviewTechnicals" EntitySet="ReviewTechnicals" />
+            <End Role="Lots" EntitySet="Lots" />
+          </AssociationSet>
+          <AssociationSet Name="ReviewTechnicalsUsers" Association="Security_ServiceModel.ReviewTechnicalsUsers">
+            <End Role="ReviewTechnicals" EntitySet="ReviewTechnicals" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="DepartamentCountrys" Association="Security_ServiceModel.DepartamentCountrys">
+            <End Role="Departament" EntitySet="DepartamentsSet" />
+            <End Role="Countrys" EntitySet="Countrys" />
+          </AssociationSet>
+          <AssociationSet Name="CitysDepartament" Association="Security_ServiceModel.CitysDepartament">
+            <End Role="Citys" EntitySet="Citys" />
+            <End Role="Departament" EntitySet="DepartamentsSet" />
+          </AssociationSet>
+          <AssociationSet Name="PersonsCitys" Association="Security_ServiceModel.PersonsCitys">
+            <End Role="Persons" EntitySet="Persons" />
+            <End Role="Citys" EntitySet="Citys" />
+          </AssociationSet>
+          <AssociationSet Name="FarmsCitys" Association="Security_ServiceModel.FarmsCitys">
+            <End Role="Farms" EntitySet="Farms" />
+            <End Role="Citys" EntitySet="Citys" />
+          </AssociationSet>
+          <AssociationSet Name="TreatmentTreatmentSupplies" Association="Security_ServiceModel.TreatmentTreatmentSupplies">
+            <End Role="Treatment" EntitySet="Fertilizations" />
+            <End Role="TreatmentSupplies" EntitySet="FertilizationSupplies" />
+          </AssociationSet>
+          <AssociationSet Name="TreatmentLotTreatment" Association="Security_ServiceModel.TreatmentLotTreatment">
+            <End Role="Treatment" EntitySet="Fertilizations" />
+            <End Role="LotTreatment" EntitySet="LotTreatmentsSet" />
+          </AssociationSet>
+          <EntitySet Name="AlertsSet" EntityType="Security_ServiceModel.Alerts" />
+          <AssociationSet Name="AlertUsers" Association="Security_ServiceModel.AlertUsers">
+            <End Role="Alert" EntitySet="AlertsSet" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+        </EntityContainer>
+        <Association Name="EvidencesReviewTechnicals">
+          <End Type="Security_ServiceModel.Evidences" Role="Evidences" Multiplicity="*" />
+          <End Type="Security_ServiceModel.ReviewTechnicals" Role="ReviewTechnicals" Multiplicity="1" />
+        </Association>
+        <EntityType Name="Departaments">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" />
+          <Property Name="State" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" />
+          <Property Name="UpdatedAt" Type="String" />
+          <Property Name="DeletedAt" Type="String" />
+          <NavigationProperty Name="Countrys" Relationship="Security_ServiceModel.DepartamentCountrys" FromRole="Departament" ToRole="Countrys" />
+          <NavigationProperty Name="Citys" Relationship="Security_ServiceModel.CitysDepartament" FromRole="Departament" ToRole="Citys" />
+          <Property Name="CountryId" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LotTreatments">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LotId" Type="String" Nullable="false" />
+          <Property Name="TreatmentId" Type="String" Nullable="false" />
+          <Property Name="State" Type="String" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" />
+          <Property Name="UpdatedAt" Type="DateTime" />
+          <Property Name="DeletedAt" Type="DateTime" />
+          <NavigationProperty Name="Lots" Relationship="Security_ServiceModel.LotFertilizationLots" FromRole="LotFertilization" ToRole="Lots" />
+          <NavigationProperty Name="Treatment" Relationship="Security_ServiceModel.TreatmentLotTreatment" FromRole="LotTreatment" ToRole="Treatment" />
+        </EntityType>
+        <Association Name="LotFertilizationLots">
+          <End Type="Security_ServiceModel.LotTreatments" Role="LotFertilization" Multiplicity="*" />
+          <End Type="Security_ServiceModel.Lots" Role="Lots" Multiplicity="1" />
+        </Association>
+        <Association Name="ReviewTechnicalsLots">
+          <End Type="Security_ServiceModel.ReviewTechnicals" Role="ReviewTechnicals" Multiplicity="*" />
+          <End Type="Security_ServiceModel.Lots" Role="Lots" Multiplicity="1" />
+        </Association>
+        <Association Name="ReviewTechnicalsUsers">
+          <End Type="Security_ServiceModel.ReviewTechnicals" Role="ReviewTechnicals" Multiplicity="*" />
+          <End Type="Security_ServiceModel.Users" Role="Users" Multiplicity="1" />
+        </Association>
+        <Association Name="DepartamentCountrys">
+          <End Type="Security_ServiceModel.Departaments" Role="Departament" Multiplicity="*" />
+          <End Type="Security_ServiceModel.Countrys" Role="Countrys" Multiplicity="1" />
+        </Association>
+        <Association Name="CitysDepartament">
+          <End Type="Security_ServiceModel.Citys" Role="Citys" Multiplicity="*" />
+          <End Type="Security_ServiceModel.Departaments" Role="Departament" Multiplicity="1" />
+        </Association>
+        <Association Name="PersonsCitys">
+          <End Type="Security_ServiceModel.Persons" Role="Persons" Multiplicity="*" />
+          <End Type="Security_ServiceModel.Citys" Role="Citys" Multiplicity="1" />
+        </Association>
+        <Association Name="FarmsCitys">
+          <End Type="Security_ServiceModel.Farms" Role="Farms" Multiplicity="*" />
+          <End Type="Security_ServiceModel.Citys" Role="Citys" Multiplicity="1" />
+        </Association>
+        <Association Name="TreatmentTreatmentSupplies">
+          <End Type="Security_ServiceModel.Treatments" Role="Treatment" Multiplicity="1" />
+          <End Type="Security_ServiceModel.TreatmentSupplies" Role="TreatmentSupplies" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Treatment">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TreatmentSupplies">
+              <PropertyRef Name="TreatmentId1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TreatmentLotTreatment">
+          <End Type="Security_ServiceModel.Treatments" Role="Treatment" Multiplicity="1" />
+          <End Type="Security_ServiceModel.LotTreatments" Role="LotTreatment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Treatment">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LotTreatment">
+              <PropertyRef Name="TreatmentId1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EnumType Name="TypeTreatment">
+          <Member Name="Fertilization" />
+          <Member Name="Fumigation" />
+        </EnumType>
+        <EntityType Name="Alerts">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" />
+          <Property Name="Date" Type="String" Nullable="false" />
+          <Property Name="Theme" Type="String" Nullable="false" />
+          <Property Name="UserId" Type="String" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" />
+          <Property Name="UpdatedAt" Type="DateTime" Nullable="true" />
+          <Property Name="DeletedAt" Type="DateTime" Nullable="true" />
+          <NavigationProperty Name="Users" Relationship="Security_ServiceModel.AlertUsers" FromRole="Alert" ToRole="Users" />
+          <Property Name="State" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <Association Name="AlertUsers">
+          <End Type="Security_ServiceModel.Alerts" Role="Alert" Multiplicity="*" />
+          <End Type="Security_ServiceModel.Users" Role="Users" Multiplicity="1" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Security_ServiceModelStoreContainer" CdmEntityContainer="Security_ServiceEntities">
+          <EntitySetMapping Name="AssessmentCriterias">
+            <EntityTypeMapping TypeName="Security_ServiceModel.AssessmentCriterias">
+              <MappingFragment StoreEntitySet="AssessmentCriterias">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Rating_range" ColumnName="Rating_range" />
+                <ScalarProperty Name="Type_criterian" ColumnName="Type_criterian" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+                <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Checklists">
+            <EntityTypeMapping TypeName="Security_ServiceModel.Checklists">
+              <MappingFragment StoreEntitySet="Checklists">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Calification_total" ColumnName="Calification_total" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+                <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Citys">
+            <EntityTypeMapping TypeName="Security_ServiceModel.Citys">
+              <MappingFragment StoreEntitySet="Citys">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DepartamentId" ColumnName="CountryId" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+                <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Countrys">
+            <EntityTypeMapping TypeName="Security_ServiceModel.Countrys">
+              <MappingFragment StoreEntitySet="Countrys">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+                <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Crops">
+            <EntityTypeMapping TypeName="Security_ServiceModel.Crops">
+              <MappingFragment StoreEntitySet="Crops">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+                <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Evidences">
+            <EntityTypeMapping TypeName="Security_ServiceModel.Evidences">
+              <MappingFragment StoreEntitySet="Evidences">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Document" ColumnName="Document" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+                <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Lots">
+            <EntityTypeMapping TypeName="Security_ServiceModel.Lots">
+              <MappingFragment StoreEntitySet="FarmCrops">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CropId" ColumnName="CropId" />
+                <ScalarProperty Name="FarmId" ColumnName="FarmId" />
+                <ScalarProperty Name="Hectare" ColumnName="Num_hectareas" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+                <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Farms">
+            <EntityTypeMapping TypeName="Security_ServiceModel.Farms">
+              <MappingFragment StoreEntitySet="Farms">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+                <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Fertilizations">
+            <EntityTypeMapping TypeName="Security_ServiceModel.Treatments">
+              <MappingFragment StoreEntitySet="Fertilizations">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="DateTreatment" ColumnName="DateFertilization" />
+                <ScalarProperty Name="TypeTreatment" ColumnName="TypeFertilization" />
+                <ScalarProperty Name="QuantityMix" ColumnName="QuantityMix" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+                <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FertilizationSupplies">
+            <EntityTypeMapping TypeName="Security_ServiceModel.TreatmentSupplies">
+              <MappingFragment StoreEntitySet="FertilizationSupplies">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Dose" ColumnName="Dose" />
+                <ScalarProperty Name="SuppliesId" ColumnName="SuppliesId" />
+                <ScalarProperty Name="TreatmentId" ColumnName="FertilizationId" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+                <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Modulos">
+            <EntityTypeMapping TypeName="Security_ServiceModel.Modulos">
+              <MappingFragment StoreEntitySet="Modulos">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+                <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Persons">
+            <EntityTypeMapping TypeName="Security_ServiceModel.Persons">
+              <MappingFragment StoreEntitySet="Persons">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="First_name" ColumnName="First_name" />
+                <ScalarProperty Name="Last_name" ColumnName="Last_name" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Addres" ColumnName="Addres" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Type_document" ColumnName="Type_document" />
+                <ScalarProperty Name="Document" ColumnName="Document" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Birth_of_date" ColumnName="Birth_of_date" />
+                <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+                <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Qualifications">
+            <EntityTypeMapping TypeName="Security_ServiceModel.Qualifications">
+              <MappingFragment StoreEntitySet="Qualifications">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Observation" ColumnName="Observation" />
+                <ScalarProperty Name="Qualification_criteria" ColumnName="Qualification_criteria" />
+                <ScalarProperty Name="AssessmentCriteriaId" ColumnName="AssessmentCriteriaId" />
+                <ScalarProperty Name="ChecklistId" ColumnName="ChecklistId" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+                <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReviewTechnicals">
+            <EntityTypeMapping TypeName="Security_ServiceModel.ReviewTechnicals">
+              <MappingFragment StoreEntitySet="ReviewTechnicals">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Date_review" ColumnName="Date_review" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Observation" ColumnName="Observation" />
+                <ScalarProperty Name="LotId" ColumnName="FarmId" />
+                <ScalarProperty Name="TecnicoId" ColumnName="TecnicoId" />
+                <ScalarProperty Name="ChecklistId" ColumnName="ChecklistId" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+                <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="Security_ServiceModel.Roles">
+              <MappingFragment StoreEntitySet="Roles">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+                <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RoleViews">
+            <EntityTypeMapping TypeName="Security_ServiceModel.RoleViews">
+              <MappingFragment StoreEntitySet="RoleViews">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="ViewId" ColumnName="ViewId" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+                <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Supplies">
+            <EntityTypeMapping TypeName="Security_ServiceModel.Supplies">
+              <MappingFragment StoreEntitySet="Supplies">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+                <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserRoles">
+            <EntityTypeMapping TypeName="Security_ServiceModel.UserRoles">
+              <MappingFragment StoreEntitySet="UserRoles">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+                <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="Security_ServiceModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+                <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Views">
+            <EntityTypeMapping TypeName="Security_ServiceModel.Views">
+              <MappingFragment StoreEntitySet="Views">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Route" ColumnName="Route" />
+                <ScalarProperty Name="ModuloId" ColumnName="ModuloId" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+                <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

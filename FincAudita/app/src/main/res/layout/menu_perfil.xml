@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="@drawable/rounded_popup">
+
+    <TextView
+        android:id="@+id/action_perfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Usuario"
+        android:textColor="@android:color/black"
+        android:drawableLeft="@drawable/person_popup"
+        android:drawablePadding="8dp"
+        android:drawableTint="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/action_cerrar_sesion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Cerrar sesión"
+        android:textColor="@android:color/black"
+        android:drawableLeft="@drawable/exit_popup"
+        android:drawablePadding="8dp"
+        android:drawableTint="@android:color/black"/>
+
+</LinearLayout>

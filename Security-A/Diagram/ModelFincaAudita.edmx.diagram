@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="83d680573c2947bdb6173abba5db6c5e" Name="Diagram1" ZoomLevel="85">
+        <EntityTypeShape EntityType="Security_ServiceModel.AssessmentCriterias" Width="2.375" PointX="14" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Security_ServiceModel.Checklists" Width="1.5" PointX="20.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Security_ServiceModel.Citys" Width="1.5" PointX="6.125" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Security_ServiceModel.Countrys" Width="1.5" PointX="1.625" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Security_ServiceModel.Crops" Width="1.5" PointX="11.375" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Security_ServiceModel.Evidences" Width="1.5" PointX="16.125" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Security_ServiceModel.Lots" Width="1.5" PointX="13.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Security_ServiceModel.Farms" Width="1.5" PointX="11.375" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Security_ServiceModel.Treatments" Width="1.5" PointX="18.125" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Security_ServiceModel.TreatmentSupplies" Width="1.5" PointX="20.5" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Security_ServiceModel.Modulos" Width="1.5" PointX="15.25" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Security_ServiceModel.Persons" Width="1.5" PointX="6.125" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Security_ServiceModel.Qualifications" Width="2.5" PointX="16.875" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Security_ServiceModel.ReviewTechnicals" Width="1.75" PointX="13.875" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Security_ServiceModel.Roles" Width="1.5" PointX="8.875" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Security_ServiceModel.RoleViews" Width="1.5" PointX="11.125" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Security_ServiceModel.Supplies" Width="1.5" PointX="22.5" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Security_ServiceModel.UserRoles" Width="1.5" PointX="8.625" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Security_ServiceModel.Users" Width="1.5" PointX="8.625" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Security_ServiceModel.Views" Width="1.5" PointX="13.25" PointY="14.125" IsExpanded="true" />
+        <AssociationConnector Association="Security_ServiceModel.FK_Qualifications_AssessmentCriterias_AssessmentCriteriaId" ManuallyRouted="false" />
+        <AssociationConnector Association="Security_ServiceModel.FK_Qualifications_Checklists_ChecklistId" ManuallyRouted="false" />
+        <AssociationConnector Association="Security_ServiceModel.FK_ReviewTechnicals_Checklists_ChecklistId" ManuallyRouted="false" />
+        <AssociationConnector Association="Security_ServiceModel.FK_FarmCrops_Crops_CropId" ManuallyRouted="false" />
+        <AssociationConnector Association="Security_ServiceModel.FK_FarmCrops_Farms_FarmId" ManuallyRouted="false" />
+        <AssociationConnector Association="Security_ServiceModel.FK_Farms_Users_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="Security_ServiceModel.FK_FertilizationSupplies_Supplies_SuppliesId" ManuallyRouted="false" />
+        <AssociationConnector Association="Security_ServiceModel.FK_Views_Modulos_ModuloId" ManuallyRouted="false" />
+        <AssociationConnector Association="Security_ServiceModel.FK_Users_Persons_PersonId" ManuallyRouted="false" />
+        <AssociationConnector Association="Security_ServiceModel.FK_RoleViews_Roles_RoleId" ManuallyRouted="false" />
+        <AssociationConnector Association="Security_ServiceModel.FK_UserRoles_Roles_RoleId" ManuallyRouted="false" />
+        <AssociationConnector Association="Security_ServiceModel.FK_RoleViews_Views_ViewId" ManuallyRouted="false" />
+        <AssociationConnector Association="Security_ServiceModel.FK_UserRoles_Users_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="Security_ServiceModel.EvidencesReviewTechnicals" />
+        <EntityTypeShape EntityType="Security_ServiceModel.Departaments" Width="1.5" PointX="3.875" PointY="11.5" />
+        <EntityTypeShape EntityType="Security_ServiceModel.LotTreatments" Width="1.5" PointX="15.875" PointY="9.25" />
+        <AssociationConnector Association="Security_ServiceModel.LotFertilizationLots" />
+        <AssociationConnector Association="Security_ServiceModel.ReviewTechnicalsLots" />
+        <AssociationConnector Association="Security_ServiceModel.ReviewTechnicalsUsers" />
+        <AssociationConnector Association="Security_ServiceModel.DepartamentCountrys" />
+        <AssociationConnector Association="Security_ServiceModel.CitysDepartament" />
+        <AssociationConnector Association="Security_ServiceModel.PersonsCitys" />
+        <AssociationConnector Association="Security_ServiceModel.FarmsCitys" />
+        <AssociationConnector Association="Security_ServiceModel.TreatmentTreatmentSupplies" />
+        <AssociationConnector Association="Security_ServiceModel.TreatmentLotTreatment" />
+        <EntityTypeShape EntityType="Security_ServiceModel.Alerts" Width="1.5" PointX="8.625" PointY="2.125" />
+        <AssociationConnector Association="Security_ServiceModel.AlertUsers" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

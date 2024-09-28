@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="ModelContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Users" EntityType="Model.User" />
+    <EntitySet Name="Modules" EntityType="Model.Modulo" />
+    <EntitySet Name="Views" EntityType="Model.View" />
+    <EntitySet Name="Roles" EntityType="Model.Role" />
+    <EntitySet Name="Persons" EntityType="Model.Person" />
+    <EntitySet Name="UserRoles" EntityType="Model.UserRole" />
+    <EntitySet Name="RoleViews" EntityType="Model.RoleView" />
+    <AssociationSet Name="UserPerson" Association="Model.UserPerson">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Person" EntitySet="Persons" />
+    </AssociationSet>
+    <AssociationSet Name="UserRoleRole" Association="Model.UserRoleRole">
+      <End Role="UserRole" EntitySet="UserRoles" />
+      <End Role="Role" EntitySet="Roles" />
+    </AssociationSet>
+    <AssociationSet Name="UserRoleUser" Association="Model.UserRoleUser">
+      <End Role="UserRole" EntitySet="UserRoles" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="RoleViewRole" Association="Model.RoleViewRole">
+      <End Role="RoleView" EntitySet="RoleViews" />
+      <End Role="Role" EntitySet="Roles" />
+    </AssociationSet>
+    <AssociationSet Name="RoleViewView" Association="Model.RoleViewView">
+      <End Role="RoleView" EntitySet="RoleViews" />
+      <End Role="View" EntitySet="Views" />
+    </AssociationSet>
+    <AssociationSet Name="ViewModule" Association="Model.ViewModule">
+      <End Role="View" EntitySet="Views" />
+      <End Role="Module" EntitySet="Modules" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" Nullable="false" />
+    <Property Name="Password" Type="String" Nullable="false" />
+    <Property Name="Created_at" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_at" Type="DateTime" Nullable="true" />
+    <Property Name="Deleted_at" Type="DateTime" Nullable="true" />
+    <NavigationProperty Name="Person_id" Relationship="Model.UserPerson" FromRole="User" ToRole="Person" />
+    <Property Name="State" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Modulo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" Nullable="false" />
+    <Property Name="Created_at" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_at" Type="DateTime" />
+    <Property Name="Deleted_at" Type="DateTime" Nullable="true" />
+    <Property Name="ViewId" Type="Int32" Nullable="false" />
+    <Property Name="State" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="View">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Description" Type="String" Nullable="false" />
+    <Property Name="Created_at" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_at" Type="DateTime" Nullable="true" />
+    <Property Name="Deleted_at" Type="DateTime" Nullable="true" />
+    <NavigationProperty Name="Module_id" Relationship="Model.ViewModule" FromRole="View" ToRole="Module" />
+    <Property Name="State" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Description" Type="String" Nullable="false" />
+    <Property Name="Created_at" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_at" Type="DateTime" Nullable="true" />
+    <Property Name="Deleted_at" Type="DateTime" Nullable="true" />
+    <Property Name="State" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="First_name" Type="String" Nullable="false" />
+    <Property Name="Last_name" Type="String" Nullable="false" />
+    <Property Name="Email" Type="String" Nullable="false" />
+    <Property Name="Addres" Type="String" Nullable="false" />
+    <Property Name="Type_document" Type="String" Nullable="false" />
+    <Property Name="Document" Type="String" Nullable="false" />
+    <Property Name="Birth_of_date" Type="DateTime" Nullable="false" />
+    <Property Name="Created_at" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_at" Type="DateTime" Nullable="true" />
+    <Property Name="Deleted_at" Type="DateTime" Nullable="true" />
+    <Property Name="Phone" Type="Int32" Nullable="false" />
+    <Property Name="State" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Created_at" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_at" Type="DateTime" Nullable="true" />
+    <Property Name="Deleted_at" Type="DateTime" Nullable="true" />
+    <NavigationProperty Name="Role_id" Relationship="Model.UserRoleRole" FromRole="UserRole" ToRole="Role" />
+    <NavigationProperty Name="User_id" Relationship="Model.UserRoleUser" FromRole="UserRole" ToRole="User" />
+    <Property Name="State" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RoleView">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Craeted_at" Type="DateTime" Nullable="false" />
+    <Property Name="Updated_at" Type="DateTime" Nullable="true" />
+    <Property Name="Deleted_at" Type="DateTime" Nullable="true" />
+    <NavigationProperty Name="Role_id" Relationship="Model.RoleViewRole" FromRole="RoleView" ToRole="Role" />
+    <NavigationProperty Name="View_id" Relationship="Model.RoleViewView" FromRole="RoleView" ToRole="View" />
+    <Property Name="State" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <Association Name="UserPerson">
+    <End Type="Model.User" Role="User" Multiplicity="1" />
+    <End Type="Model.Person" Role="Person" Multiplicity="1" />
+  </Association>
+  <Association Name="UserRoleRole">
+    <End Type="Model.UserRole" Role="UserRole" Multiplicity="*" />
+    <End Type="Model.Role" Role="Role" Multiplicity="1" />
+  </Association>
+  <Association Name="UserRoleUser">
+    <End Type="Model.UserRole" Role="UserRole" Multiplicity="*" />
+    <End Type="Model.User" Role="User" Multiplicity="1" />
+  </Association>
+  <Association Name="RoleViewRole">
+    <End Type="Model.RoleView" Role="RoleView" Multiplicity="*" />
+    <End Type="Model.Role" Role="Role" Multiplicity="1" />
+  </Association>
+  <Association Name="RoleViewView">
+    <End Type="Model.RoleView" Role="RoleView" Multiplicity="*" />
+    <End Type="Model.View" Role="View" Multiplicity="1" />
+  </Association>
+  <Association Name="ViewModule">
+    <End Type="Model.View" Role="View" Multiplicity="*" />
+    <End Type="Model.Modulo" Role="Module" Multiplicity="1" />
+  </Association>
+</Schema>

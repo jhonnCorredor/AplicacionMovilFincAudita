@@ -1,0 +1,89 @@
+C:\Users\srhad\OneDrive\Documentos\C#\proyects\Security-A\Security-A\Entity\bin\Debug\net7.0\Entity.deps.json
+C:\Users\srhad\OneDrive\Documentos\C#\proyects\Security-A\Security-A\Entity\bin\Debug\net7.0\Entity.runtimeconfig.json
+C:\Users\srhad\OneDrive\Documentos\C#\proyects\Security-A\Security-A\Entity\bin\Debug\net7.0\Entity.dll
+C:\Users\srhad\OneDrive\Documentos\C#\proyects\Security-A\Security-A\Entity\bin\Debug\net7.0\Entity.pdb
+C:\Users\srhad\OneDrive\Documentos\C#\proyects\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.csproj.AssemblyReference.cache
+C:\Users\srhad\OneDrive\Documentos\C#\proyects\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\srhad\OneDrive\Documentos\C#\proyects\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.AssemblyInfoInputs.cache
+C:\Users\srhad\OneDrive\Documentos\C#\proyects\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.AssemblyInfo.cs
+C:\Users\srhad\OneDrive\Documentos\C#\proyects\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.csproj.CoreCompileInputs.cache
+C:\Users\srhad\OneDrive\Documentos\C#\proyects\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.sourcelink.json
+C:\Users\srhad\OneDrive\Documentos\C#\proyects\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.dll
+C:\Users\srhad\OneDrive\Documentos\C#\proyects\Security-A\Security-A\Entity\obj\Debug\net7.0\refint\Entity.dll
+C:\Users\srhad\OneDrive\Documentos\C#\proyects\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.pdb
+C:\Users\srhad\OneDrive\Documentos\C#\proyects\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.genruntimeconfig.cache
+C:\Users\srhad\OneDrive\Documentos\C#\proyects\Security-A\Security-A\Entity\obj\Debug\net7.0\ref\Entity.dll
+C:\Users\SANTIAGO\Documents\Proyecto FincaAudita Dev\Service-securityC-\Security-A\Security-A\Entity\bin\Debug\net7.0\Entity.deps.json
+C:\Users\SANTIAGO\Documents\Proyecto FincaAudita Dev\Service-securityC-\Security-A\Security-A\Entity\bin\Debug\net7.0\Entity.runtimeconfig.json
+C:\Users\SANTIAGO\Documents\Proyecto FincaAudita Dev\Service-securityC-\Security-A\Security-A\Entity\bin\Debug\net7.0\Entity.dll
+C:\Users\SANTIAGO\Documents\Proyecto FincaAudita Dev\Service-securityC-\Security-A\Security-A\Entity\bin\Debug\net7.0\Entity.pdb
+C:\Users\SANTIAGO\Documents\Proyecto FincaAudita Dev\Service-securityC-\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.csproj.AssemblyReference.cache
+C:\Users\SANTIAGO\Documents\Proyecto FincaAudita Dev\Service-securityC-\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SANTIAGO\Documents\Proyecto FincaAudita Dev\Service-securityC-\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.AssemblyInfoInputs.cache
+C:\Users\SANTIAGO\Documents\Proyecto FincaAudita Dev\Service-securityC-\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.AssemblyInfo.cs
+C:\Users\SANTIAGO\Documents\Proyecto FincaAudita Dev\Service-securityC-\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.csproj.CoreCompileInputs.cache
+C:\Users\SANTIAGO\Documents\Proyecto FincaAudita Dev\Service-securityC-\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.sourcelink.json
+C:\Users\SANTIAGO\Documents\Proyecto FincaAudita Dev\Service-securityC-\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.dll
+C:\Users\SANTIAGO\Documents\Proyecto FincaAudita Dev\Service-securityC-\Security-A\Security-A\Entity\obj\Debug\net7.0\refint\Entity.dll
+C:\Users\SANTIAGO\Documents\Proyecto FincaAudita Dev\Service-securityC-\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.pdb
+C:\Users\SANTIAGO\Documents\Proyecto FincaAudita Dev\Service-securityC-\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.genruntimeconfig.cache
+C:\Users\SANTIAGO\Documents\Proyecto FincaAudita Dev\Service-securityC-\Security-A\Security-A\Entity\obj\Debug\net7.0\ref\Entity.dll
+C:\Users\srhad\OneDrive\Documentos\C#\proyects\Backend\Security-A\Security-A\Entity\bin\Debug\net7.0\Entity.deps.json
+C:\Users\srhad\OneDrive\Documentos\C#\proyects\Backend\Security-A\Security-A\Entity\bin\Debug\net7.0\Entity.runtimeconfig.json
+C:\Users\srhad\OneDrive\Documentos\C#\proyects\Backend\Security-A\Security-A\Entity\bin\Debug\net7.0\Entity.dll
+C:\Users\srhad\OneDrive\Documentos\C#\proyects\Backend\Security-A\Security-A\Entity\bin\Debug\net7.0\Entity.pdb
+C:\Users\srhad\OneDrive\Documentos\C#\proyects\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.csproj.AssemblyReference.cache
+C:\Users\srhad\OneDrive\Documentos\C#\proyects\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\srhad\OneDrive\Documentos\C#\proyects\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.AssemblyInfoInputs.cache
+C:\Users\srhad\OneDrive\Documentos\C#\proyects\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.AssemblyInfo.cs
+C:\Users\srhad\OneDrive\Documentos\C#\proyects\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.csproj.CoreCompileInputs.cache
+C:\Users\srhad\OneDrive\Documentos\C#\proyects\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.sourcelink.json
+C:\Users\srhad\OneDrive\Documentos\C#\proyects\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.dll
+C:\Users\srhad\OneDrive\Documentos\C#\proyects\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\refint\Entity.dll
+C:\Users\srhad\OneDrive\Documentos\C#\proyects\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.pdb
+C:\Users\srhad\OneDrive\Documentos\C#\proyects\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.genruntimeconfig.cache
+C:\Users\srhad\OneDrive\Documentos\C#\proyects\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\ref\Entity.dll
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\Service-securityC-\Backend\Security-A\Security-A\Entity\bin\Debug\net7.0\Entity.deps.json
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\Service-securityC-\Backend\Security-A\Security-A\Entity\bin\Debug\net7.0\Entity.runtimeconfig.json
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\Service-securityC-\Backend\Security-A\Security-A\Entity\bin\Debug\net7.0\Entity.dll
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\Service-securityC-\Backend\Security-A\Security-A\Entity\bin\Debug\net7.0\Entity.pdb
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\Service-securityC-\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.csproj.AssemblyReference.cache
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\Service-securityC-\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\Service-securityC-\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.AssemblyInfoInputs.cache
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\Service-securityC-\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.AssemblyInfo.cs
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\Service-securityC-\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.csproj.CoreCompileInputs.cache
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\Service-securityC-\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.sourcelink.json
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\Service-securityC-\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.dll
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\Service-securityC-\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\refint\Entity.dll
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\Service-securityC-\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.pdb
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\Service-securityC-\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.genruntimeconfig.cache
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\Service-securityC-\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\ref\Entity.dll
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\Security-A\Security-A\Entity\bin\Debug\net7.0\Entity.deps.json
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\Security-A\Security-A\Entity\bin\Debug\net7.0\Entity.runtimeconfig.json
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\Security-A\Security-A\Entity\bin\Debug\net7.0\Entity.dll
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\Security-A\Security-A\Entity\bin\Debug\net7.0\Entity.pdb
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.csproj.AssemblyReference.cache
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.AssemblyInfoInputs.cache
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.AssemblyInfo.cs
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.csproj.CoreCompileInputs.cache
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.dll
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\Security-A\Security-A\Entity\obj\Debug\net7.0\refint\Entity.dll
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.pdb
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.genruntimeconfig.cache
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\Security-A\Security-A\Entity\obj\Debug\net7.0\ref\Entity.dll
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\clone\Service-securityC-\Backend\Security-A\Security-A\Entity\bin\Debug\net7.0\Entity.deps.json
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\clone\Service-securityC-\Backend\Security-A\Security-A\Entity\bin\Debug\net7.0\Entity.runtimeconfig.json
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\clone\Service-securityC-\Backend\Security-A\Security-A\Entity\bin\Debug\net7.0\Entity.dll
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\clone\Service-securityC-\Backend\Security-A\Security-A\Entity\bin\Debug\net7.0\Entity.pdb
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\clone\Service-securityC-\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.csproj.AssemblyReference.cache
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\clone\Service-securityC-\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\clone\Service-securityC-\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.AssemblyInfoInputs.cache
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\clone\Service-securityC-\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.AssemblyInfo.cs
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\clone\Service-securityC-\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.csproj.CoreCompileInputs.cache
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\clone\Service-securityC-\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.sourcelink.json
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\clone\Service-securityC-\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.dll
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\clone\Service-securityC-\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\refint\Entity.dll
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\clone\Service-securityC-\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.pdb
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\clone\Service-securityC-\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\Entity.genruntimeconfig.cache
+C:\Users\srhad\OneDrive\Documentos\FincauditaCode\clone\Service-securityC-\Backend\Security-A\Security-A\Entity\obj\Debug\net7.0\ref\Entity.dll

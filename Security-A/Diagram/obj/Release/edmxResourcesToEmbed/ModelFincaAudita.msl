@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Security_ServiceModelStoreContainer" CdmEntityContainer="Security_ServiceEntities">
+    <EntitySetMapping Name="AssessmentCriterias">
+      <EntityTypeMapping TypeName="Security_ServiceModel.AssessmentCriterias">
+        <MappingFragment StoreEntitySet="AssessmentCriterias">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Rating_range" ColumnName="Rating_range" />
+          <ScalarProperty Name="Type_criterian" ColumnName="Type_criterian" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+          <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+          <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Checklists">
+      <EntityTypeMapping TypeName="Security_ServiceModel.Checklists">
+        <MappingFragment StoreEntitySet="Checklists">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Calification_total" ColumnName="Calification_total" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+          <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+          <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Citys">
+      <EntityTypeMapping TypeName="Security_ServiceModel.Citys">
+        <MappingFragment StoreEntitySet="Citys">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DepartamentId" ColumnName="CountryId" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+          <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+          <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countrys">
+      <EntityTypeMapping TypeName="Security_ServiceModel.Countrys">
+        <MappingFragment StoreEntitySet="Countrys">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+          <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+          <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Crops">
+      <EntityTypeMapping TypeName="Security_ServiceModel.Crops">
+        <MappingFragment StoreEntitySet="Crops">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+          <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+          <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Evidences">
+      <EntityTypeMapping TypeName="Security_ServiceModel.Evidences">
+        <MappingFragment StoreEntitySet="Evidences">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Document" ColumnName="Document" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+          <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+          <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lots">
+      <EntityTypeMapping TypeName="Security_ServiceModel.Lots">
+        <MappingFragment StoreEntitySet="FarmCrops">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CropId" ColumnName="CropId" />
+          <ScalarProperty Name="FarmId" ColumnName="FarmId" />
+          <ScalarProperty Name="Hectare" ColumnName="Num_hectareas" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+          <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+          <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Farms">
+      <EntityTypeMapping TypeName="Security_ServiceModel.Farms">
+        <MappingFragment StoreEntitySet="Farms">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+          <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+          <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fertilizations">
+      <EntityTypeMapping TypeName="Security_ServiceModel.Treatments">
+        <MappingFragment StoreEntitySet="Fertilizations">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DateTreatment" ColumnName="DateFertilization" />
+          <ScalarProperty Name="TypeTreatment" ColumnName="TypeFertilization" />
+          <ScalarProperty Name="QuantityMix" ColumnName="QuantityMix" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+          <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+          <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FertilizationSupplies">
+      <EntityTypeMapping TypeName="Security_ServiceModel.TreatmentSupplies">
+        <MappingFragment StoreEntitySet="FertilizationSupplies">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Dose" ColumnName="Dose" />
+          <ScalarProperty Name="SuppliesId" ColumnName="SuppliesId" />
+          <ScalarProperty Name="TreatmentId" ColumnName="FertilizationId" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+          <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+          <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Modulos">
+      <EntityTypeMapping TypeName="Security_ServiceModel.Modulos">
+        <MappingFragment StoreEntitySet="Modulos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+          <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+          <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Persons">
+      <EntityTypeMapping TypeName="Security_ServiceModel.Persons">
+        <MappingFragment StoreEntitySet="Persons">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="First_name" ColumnName="First_name" />
+          <ScalarProperty Name="Last_name" ColumnName="Last_name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Addres" ColumnName="Addres" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Type_document" ColumnName="Type_document" />
+          <ScalarProperty Name="Document" ColumnName="Document" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Birth_of_date" ColumnName="Birth_of_date" />
+          <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+          <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+          <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Qualifications">
+      <EntityTypeMapping TypeName="Security_ServiceModel.Qualifications">
+        <MappingFragment StoreEntitySet="Qualifications">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Observation" ColumnName="Observation" />
+          <ScalarProperty Name="Qualification_criteria" ColumnName="Qualification_criteria" />
+          <ScalarProperty Name="AssessmentCriteriaId" ColumnName="AssessmentCriteriaId" />
+          <ScalarProperty Name="ChecklistId" ColumnName="ChecklistId" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+          <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+          <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReviewTechnicals">
+      <EntityTypeMapping TypeName="Security_ServiceModel.ReviewTechnicals">
+        <MappingFragment StoreEntitySet="ReviewTechnicals">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Date_review" ColumnName="Date_review" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Observation" ColumnName="Observation" />
+          <ScalarProperty Name="LotId" ColumnName="FarmId" />
+          <ScalarProperty Name="TecnicoId" ColumnName="TecnicoId" />
+          <ScalarProperty Name="ChecklistId" ColumnName="ChecklistId" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+          <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+          <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="Security_ServiceModel.Roles">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+          <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+          <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoleViews">
+      <EntityTypeMapping TypeName="Security_ServiceModel.RoleViews">
+        <MappingFragment StoreEntitySet="RoleViews">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="ViewId" ColumnName="ViewId" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+          <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+          <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Supplies">
+      <EntityTypeMapping TypeName="Security_ServiceModel.Supplies">
+        <MappingFragment StoreEntitySet="Supplies">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+          <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+          <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRoles">
+      <EntityTypeMapping TypeName="Security_ServiceModel.UserRoles">
+        <MappingFragment StoreEntitySet="UserRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+          <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+          <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="Security_ServiceModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+          <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+          <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Views">
+      <EntityTypeMapping TypeName="Security_ServiceModel.Views">
+        <MappingFragment StoreEntitySet="Views">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Route" ColumnName="Route" />
+          <ScalarProperty Name="ModuloId" ColumnName="ModuloId" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="CreatedAt" ColumnName="Created_at" />
+          <ScalarProperty Name="UpdatedAt" ColumnName="Updated_at" />
+          <ScalarProperty Name="DeletedAt" ColumnName="Deleted_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,652 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Security_ServiceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AssessmentCriterias">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Rating_range" Type="int" Nullable="false" />
+    <Property Name="Type_criterian" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="State" Type="bit" Nullable="false" />
+    <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Updated_at" Type="datetime2" Precision="7" />
+    <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="Checklists">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Calification_total" Type="int" Nullable="false" />
+    <Property Name="State" Type="bit" Nullable="false" />
+    <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Updated_at" Type="datetime2" Precision="7" />
+    <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="Citys">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CountryId" Type="int" Nullable="false" />
+    <Property Name="State" Type="bit" Nullable="false" />
+    <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Updated_at" Type="datetime2" Precision="7" />
+    <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="Countrys">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ContinentId" Type="int" Nullable="false" />
+    <Property Name="State" Type="bit" Nullable="false" />
+    <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Updated_at" Type="datetime2" Precision="7" />
+    <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="Crops">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="State" Type="bit" Nullable="false" />
+    <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Updated_at" Type="datetime2" Precision="7" />
+    <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="Evidences">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Document" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="State" Type="bit" Nullable="false" />
+    <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Updated_at" Type="datetime2" Precision="7" />
+    <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="FarmCrops">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CropId" Type="int" Nullable="false" />
+    <Property Name="FarmId" Type="int" Nullable="false" />
+    <Property Name="Num_hectareas" Type="int" Nullable="false" />
+    <Property Name="State" Type="bit" Nullable="false" />
+    <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Updated_at" Type="datetime2" Precision="7" />
+    <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="Farms">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CityId" Type="int" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="State" Type="bit" Nullable="false" />
+    <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Updated_at" Type="datetime2" Precision="7" />
+    <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="Fertilizations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateFertilization" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="TypeFertilization" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="QuantityMix" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ReviewTechnicalId" Type="int" Nullable="false" />
+    <Property Name="State" Type="bit" Nullable="false" />
+    <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Updated_at" Type="datetime2" Precision="7" />
+    <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="FertilizationSupplies">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Dose" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SuppliesId" Type="int" Nullable="false" />
+    <Property Name="FertilizationId" Type="int" Nullable="false" />
+    <Property Name="State" Type="bit" Nullable="false" />
+    <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Updated_at" Type="datetime2" Precision="7" />
+    <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="Modulos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="State" Type="bit" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Position" Type="int" Nullable="false" />
+    <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Updated_at" Type="datetime2" Precision="7" />
+    <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="Persons">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="First_name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Last_name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Addres" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Phone" Type="int" Nullable="false" />
+    <Property Name="Type_document" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Document" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CityId" Type="int" Nullable="false" />
+    <Property Name="State" Type="bit" Nullable="false" />
+    <Property Name="Birth_of_date" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Updated_at" Type="datetime2" Precision="7" />
+    <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="Qualifications">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Observation" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Qualification_criteria" Type="int" Nullable="false" />
+    <Property Name="AssesmentCriteriaId" Type="int" Nullable="false" />
+    <Property Name="AssessmentCriteriaId" Type="int" Nullable="false" />
+    <Property Name="ChecklistId" Type="int" Nullable="false" />
+    <Property Name="State" Type="bit" Nullable="false" />
+    <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Updated_at" Type="datetime2" Precision="7" />
+    <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="ReviewTechnicals">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date_review" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Observation" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FarmId" Type="int" Nullable="false" />
+    <Property Name="TecnicoId" Type="int" Nullable="false" />
+    <Property Name="ChecklistId" Type="int" Nullable="false" />
+    <Property Name="State" Type="bit" Nullable="false" />
+    <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Updated_at" Type="datetime2" Precision="7" />
+    <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="State" Type="bit" Nullable="false" />
+    <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Updated_at" Type="datetime2" Precision="7" />
+    <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="RoleViews">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+    <Property Name="ViewId" Type="int" Nullable="false" />
+    <Property Name="State" Type="bit" Nullable="false" />
+    <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Updated_at" Type="datetime2" Precision="7" />
+    <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="Supplies">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="price" Type="float" Nullable="false" />
+    <Property Name="State" Type="bit" Nullable="false" />
+    <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Updated_at" Type="datetime2" Precision="7" />
+    <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="UserRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+    <Property Name="State" Type="bit" Nullable="false" />
+    <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Updated_at" Type="datetime2" Precision="7" />
+    <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PersonId" Type="int" Nullable="false" />
+    <Property Name="State" Type="bit" Nullable="false" />
+    <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Updated_at" Type="datetime2" Precision="7" />
+    <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityType Name="Views">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Route" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ModuloId" Type="int" Nullable="false" />
+    <Property Name="State" Type="bit" Nullable="false" />
+    <Property Name="Created_at" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Updated_at" Type="datetime2" Precision="7" />
+    <Property Name="Deleted_at" Type="datetime2" Precision="7" />
+  </EntityType>
+  <Association Name="FK_Citys_Countrys_CountryId">
+    <End Role="Countrys" Type="Self.Countrys" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Citys" Type="Self.Citys" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Countrys">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Citys">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FarmCrops_Crops_CropId">
+    <End Role="Crops" Type="Self.Crops" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FarmCrops" Type="Self.FarmCrops" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Crops">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FarmCrops">
+        <PropertyRef Name="CropId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FarmCrops_Farms_FarmId">
+    <End Role="Farms" Type="Self.Farms" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FarmCrops" Type="Self.FarmCrops" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Farms">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FarmCrops">
+        <PropertyRef Name="FarmId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Farms_Citys_CityId">
+    <End Role="Citys" Type="Self.Citys" Multiplicity="0..1" />
+    <End Role="Farms" Type="Self.Farms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Citys">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Farms">
+        <PropertyRef Name="CityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Farms_Users_UserId">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Farms" Type="Self.Farms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Farms">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fertilizations_ReviewTechnicals_ReviewTechnicalId">
+    <End Role="ReviewTechnicals" Type="Self.ReviewTechnicals" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Fertilizations" Type="Self.Fertilizations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReviewTechnicals">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Fertilizations">
+        <PropertyRef Name="ReviewTechnicalId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FertilizationSupplies_Fertilizations_FertilizationId">
+    <End Role="Fertilizations" Type="Self.Fertilizations" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FertilizationSupplies" Type="Self.FertilizationSupplies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fertilizations">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FertilizationSupplies">
+        <PropertyRef Name="FertilizationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FertilizationSupplies_Supplies_SuppliesId">
+    <End Role="Supplies" Type="Self.Supplies" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FertilizationSupplies" Type="Self.FertilizationSupplies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplies">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FertilizationSupplies">
+        <PropertyRef Name="SuppliesId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Persons_Citys_CityId">
+    <End Role="Citys" Type="Self.Citys" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Persons" Type="Self.Persons" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Citys">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Persons">
+        <PropertyRef Name="CityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Qualifications_AssessmentCriterias_AssessmentCriteriaId">
+    <End Role="AssessmentCriterias" Type="Self.AssessmentCriterias" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Qualifications" Type="Self.Qualifications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AssessmentCriterias">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Qualifications">
+        <PropertyRef Name="AssessmentCriteriaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Qualifications_Checklists_ChecklistId">
+    <End Role="Checklists" Type="Self.Checklists" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Qualifications" Type="Self.Qualifications" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Checklists">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Qualifications">
+        <PropertyRef Name="ChecklistId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReviewTechnicals_Checklists_ChecklistId">
+    <End Role="Checklists" Type="Self.Checklists" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ReviewTechnicals" Type="Self.ReviewTechnicals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Checklists">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ReviewTechnicals">
+        <PropertyRef Name="ChecklistId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReviewTechnicals_Farms_FarmId">
+    <End Role="Farms" Type="Self.Farms" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ReviewTechnicals" Type="Self.ReviewTechnicals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Farms">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ReviewTechnicals">
+        <PropertyRef Name="FarmId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReviewTechnicals_Users_TecnicoId">
+    <End Role="Users" Type="Self.Users" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ReviewTechnicals" Type="Self.ReviewTechnicals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ReviewTechnicals">
+        <PropertyRef Name="TecnicoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RoleViews_Roles_RoleId">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RoleViews" Type="Self.RoleViews" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RoleViews">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RoleViews_Views_ViewId">
+    <End Role="Views" Type="Self.Views" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RoleViews" Type="Self.RoleViews" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Views">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RoleViews">
+        <PropertyRef Name="ViewId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserRoles_Roles_RoleId">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UserRoles" Type="Self.UserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserRoles_Users_UserId">
+    <End Role="Users" Type="Self.Users" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UserRoles" Type="Self.UserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Persons_PersonId">
+    <End Role="Persons" Type="Self.Persons" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persons">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Views_Modulos_ModuloId">
+    <End Role="Modulos" Type="Self.Modulos" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Views" Type="Self.Views" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Modulos">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Views">
+        <PropertyRef Name="ModuloId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Security_ServiceModelStoreContainer">
+    <EntitySet Name="AssessmentCriterias" EntityType="Self.AssessmentCriterias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Checklists" EntityType="Self.Checklists" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Citys" EntityType="Self.Citys" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Countrys" EntityType="Self.Countrys" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Crops" EntityType="Self.Crops" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Evidences" EntityType="Self.Evidences" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FarmCrops" EntityType="Self.FarmCrops" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Farms" EntityType="Self.Farms" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Fertilizations" EntityType="Self.Fertilizations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FertilizationSupplies" EntityType="Self.FertilizationSupplies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Modulos" EntityType="Self.Modulos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Persons" EntityType="Self.Persons" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Qualifications" EntityType="Self.Qualifications" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReviewTechnicals" EntityType="Self.ReviewTechnicals" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RoleViews" EntityType="Self.RoleViews" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Supplies" EntityType="Self.Supplies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserRoles" EntityType="Self.UserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Views" EntityType="Self.Views" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Citys_Countrys_CountryId" Association="Self.FK_Citys_Countrys_CountryId">
+      <End Role="Countrys" EntitySet="Countrys" />
+      <End Role="Citys" EntitySet="Citys" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FarmCrops_Crops_CropId" Association="Self.FK_FarmCrops_Crops_CropId">
+      <End Role="Crops" EntitySet="Crops" />
+      <End Role="FarmCrops" EntitySet="FarmCrops" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FarmCrops_Farms_FarmId" Association="Self.FK_FarmCrops_Farms_FarmId">
+      <End Role="Farms" EntitySet="Farms" />
+      <End Role="FarmCrops" EntitySet="FarmCrops" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Farms_Citys_CityId" Association="Self.FK_Farms_Citys_CityId">
+      <End Role="Citys" EntitySet="Citys" />
+      <End Role="Farms" EntitySet="Farms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Farms_Users_UserId" Association="Self.FK_Farms_Users_UserId">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Farms" EntitySet="Farms" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fertilizations_ReviewTechnicals_ReviewTechnicalId" Association="Self.FK_Fertilizations_ReviewTechnicals_ReviewTechnicalId">
+      <End Role="ReviewTechnicals" EntitySet="ReviewTechnicals" />
+      <End Role="Fertilizations" EntitySet="Fertilizations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FertilizationSupplies_Fertilizations_FertilizationId" Association="Self.FK_FertilizationSupplies_Fertilizations_FertilizationId">
+      <End Role="Fertilizations" EntitySet="Fertilizations" />
+      <End Role="FertilizationSupplies" EntitySet="FertilizationSupplies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FertilizationSupplies_Supplies_SuppliesId" Association="Self.FK_FertilizationSupplies_Supplies_SuppliesId">
+      <End Role="Supplies" EntitySet="Supplies" />
+      <End Role="FertilizationSupplies" EntitySet="FertilizationSupplies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Persons_Citys_CityId" Association="Self.FK_Persons_Citys_CityId">
+      <End Role="Citys" EntitySet="Citys" />
+      <End Role="Persons" EntitySet="Persons" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Qualifications_AssessmentCriterias_AssessmentCriteriaId" Association="Self.FK_Qualifications_AssessmentCriterias_AssessmentCriteriaId">
+      <End Role="AssessmentCriterias" EntitySet="AssessmentCriterias" />
+      <End Role="Qualifications" EntitySet="Qualifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Qualifications_Checklists_ChecklistId" Association="Self.FK_Qualifications_Checklists_ChecklistId">
+      <End Role="Checklists" EntitySet="Checklists" />
+      <End Role="Qualifications" EntitySet="Qualifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReviewTechnicals_Checklists_ChecklistId" Association="Self.FK_ReviewTechnicals_Checklists_ChecklistId">
+      <End Role="Checklists" EntitySet="Checklists" />
+      <End Role="ReviewTechnicals" EntitySet="ReviewTechnicals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReviewTechnicals_Farms_FarmId" Association="Self.FK_ReviewTechnicals_Farms_FarmId">
+      <End Role="Farms" EntitySet="Farms" />
+      <End Role="ReviewTechnicals" EntitySet="ReviewTechnicals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReviewTechnicals_Users_TecnicoId" Association="Self.FK_ReviewTechnicals_Users_TecnicoId">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="ReviewTechnicals" EntitySet="ReviewTechnicals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RoleViews_Roles_RoleId" Association="Self.FK_RoleViews_Roles_RoleId">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="RoleViews" EntitySet="RoleViews" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RoleViews_Views_ViewId" Association="Self.FK_RoleViews_Views_ViewId">
+      <End Role="Views" EntitySet="Views" />
+      <End Role="RoleViews" EntitySet="RoleViews" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserRoles_Roles_RoleId" Association="Self.FK_UserRoles_Roles_RoleId">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="UserRoles" EntitySet="UserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserRoles_Users_UserId" Association="Self.FK_UserRoles_Users_UserId">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="UserRoles" EntitySet="UserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Persons_PersonId" Association="Self.FK_Users_Persons_PersonId">
+      <End Role="Persons" EntitySet="Persons" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Views_Modulos_ModuloId" Association="Self.FK_Views_Modulos_ModuloId">
+      <End Role="Modulos" EntitySet="Modulos" />
+      <End Role="Views" EntitySet="Views" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

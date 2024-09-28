@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">FincAudita</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="type_document">
+        <item>Cédula de Ciudadanía</item>
+        <item>Tarjeta de Identidad</item>
+        <item>Cédula de Extranjería</item>
+        <item>Pasaporte</item>
+    </string-array>
+    <string-array name="gender">
+        <item>Masculino</item>
+        <item>Femenino</item>
+    </string-array>
+    <string-array name="type_treatment">
+        <item>Fertilación</item>
+        <item>Fumigación</item>
+    </string-array>
+</resources>
